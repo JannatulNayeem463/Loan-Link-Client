@@ -1,0 +1,39 @@
+[
+    {
+      "title": "Personal Loan",
+      "desc": "Flexible personal loans for all your needs.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfDhanWv0jSowz-gpH_AsP88vum-sz267lWI3ahmbYEiDdALdQqfPhLNTeB4CwPp8cLk8&usqp=CAU",
+      "maxLoan": "$50,000"
+    },
+    {
+      "title": "Home Loan",
+      "desc": "Affordable home loans with low interest rates.",
+      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?fit=crop&w=400&q=80",
+      "maxLoan": "$500,000"
+    },
+    {
+      "title": "Car Loan",
+      "desc": "Quick and easy car loans to get you moving.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbsijSSlUWp9bMWsXesgK1WAyB3uUcMvwnEHssz6FpotVt_O8N-j6OiNvsU5et2P8z1YA&usqp=CAU",
+      "maxLoan": "$100,000"
+    },
+    {
+      "title": "Education Loan",
+      "desc": "Invest in your future with education loans.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLBpTbzJQtvj3xVFN1kvwfvRKKophSaUfV8ZLZ0dObh5IFYmHxGnv56UNapnqcXl2ucNE&usqp=CAU",
+      "maxLoan": "$200,000"
+    },
+    {
+      "title": "Business Loan",
+      "desc": "Grow your business with our flexible loans.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe8VtdrVQJAGt8WRtOd4_64mzCVAq1LA_g9jf3LAe1ScDJUm8ZQmE0ggWi-SWaJYSwsV4&usqp=CAU",
+      "maxLoan": "$1,000,000"
+    },
+    {
+      "title": "Travel Loan",
+      "desc": "Make your dream vacation a reality.",
+      "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?fit=crop&w=400&q=80",
+      "maxLoan": "$20,000"
+    }
+  ]
+  

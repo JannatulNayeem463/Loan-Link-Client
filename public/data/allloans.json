@@ -1,0 +1,305 @@
+[
+  {
+    "_id": 1,
+    "title": "Personal Loan",
+    "description": "Flexible personal loans for all your needs.",
+    "category": "Personal",
+    "interest": "12%",
+    "maxLoan": "$50,000",
+    "emiPlans": ["6 months", "12 months", "24 months"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfDhanWv0jSowz-gpH_AsP88vum-sz267lWI3ahmbYE_iddALdQqfPhLNTeB4CwPp8cLk8&usqp=CAU"
+  },
+  {
+    "_id": 2,
+    "title": "Home Loan",
+    "description": "Affordable home loans with low interest rates.",
+    "category": "Home",
+    "interest": "8%",
+    "maxLoan": "$500,000",
+    "emiPlans": ["5 years", "10 years", "15 years"],
+    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?fit=crop&w=400&q=80"
+  },
+  {
+    "_id": 3,
+    "title": "Car Loan",
+    "description": "Quick and easy car loans to get you moving.",
+    "category": "Vehicle",
+    "interest": "10%",
+    "maxLoan": "$100,000",
+    "emiPlans": ["12 months", "24 months", "36 months"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbsijSSlUWp9bMWsXesgK1WAyB3uUcMvwnEHssz6FpotVt_O8N-j6OiNvsU5et2P8z1YA&usqp=CAU"
+  },
+  {
+    "_id": 4,
+    "title": "Education Loan",
+    "description": "Invest in your future with education loans.",
+    "category": "Education",
+    "interest": "9%",
+    "maxLoan": "$200,000",
+    "emiPlans": ["1 year", "2 years", "5 years"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLBpTbzJQtvj3xVFN1kvwfvRKKophSaUfV8ZLZ0dObh5IFYmHxGnv56UNapnqcXl2ucNE&usqp=CAU"
+  },
+  {
+    "_id": 5,
+    "title": "Business Loan",
+    "description": "Grow your business with our flexible loans.",
+    "category": "Business",
+    "interest": "11%",
+    "maxLoan": "$1,000,000",
+    "emiPlans": ["1 year", "3 years", "5 years"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe8VtdrVQJAGt8WRtOd4_64mzCVAq1LA_g9jf3LAe1ScDJUm8ZQmE0ggWi-SWaJYSwsV4&usqp=CAU"
+  },
+  {
+    "_id": 6,
+    "title": "Travel Loan",
+    "description": "Make your dream vacation a reality.",
+    "category": "Travel",
+    "interest": "13%",
+    "maxLoan": "$20,000",
+    "emiPlans": ["3 months", "6 months", "12 months"],
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?fit=crop&w=400&q=80"
+  },
+
+  {
+    "_id": 7,
+    "title": "Medical Loan",
+    "description": "Cover medical expenses with ease.",
+    "category": "Medical",
+    "interest": "10%",
+    "maxLoan": "$100,000",
+    "emiPlans": ["6 months", "12 months", "24 months"],
+    "image": "https://www.debt.org/wp-content/uploads/2019/05/medical-loan-financing.jpg"
+  },
+  {
+    "_id": 8,
+    "title": "Wedding Loan",
+    "description": "Plan your dream wedding without financial stress.",
+    "category": "Personal",
+    "interest": "12%",
+    "maxLoan": "$50,000",
+    "emiPlans": ["6 months", "12 months", "24 months"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwWMQdnQnV582p4LKB7BhZT1eErRToFOjvYHx3huxr&s"
+  },
+  {
+    "_id": 9,
+    "title": "Renovation Loan",
+    "description": "Upgrade your home with affordable loans.",
+    "category": "Home",
+    "interest": "9%",
+    "maxLoan": "$200,000",
+    "emiPlans": ["1 year", "3 years", "5 years"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCC9TC20LsXhKwz1XWwvxpQW98JF1kITO_idGBvkb5L&s"
+  },
+  {
+    "_id": 10,
+    "title": "Bike Loan",
+    "description": "Get a new bike with easy EMI options.",
+    "category": "Vehicle",
+    "interest": "11%",
+    "maxLoan": "$30,000",
+    "emiPlans": ["6 months", "12 months", "18 months"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCwqaCurIlmsQpBUp2SDXJ-OEj7m6qfb6Law&s"
+  },
+  {
+    "_id": 11,
+    "title": "Laptop Loan",
+    "description": "Finance your tech needs effortlessly.",
+    "category": "Education",
+    "interest": "10%",
+    "maxLoan": "$5,000",
+    "emiPlans": ["6 months", "12 months", "24 months"],
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?fit=crop&w=400&q=80"
+  },
+  {
+    "_id": 12,
+    "title": "Startup Loan",
+    "description": "Kickstart your business _idea with easy funding.",
+    "category": "Business",
+    "interest": "13%",
+    "maxLoan": "$500,000",
+    "emiPlans": ["1 year", "3 years", "5 years"],
+    "image": "https://smeloan.sg/wp-content/uploads/2022/05/startup-business-loan-550x413.jpg"
+  },
+  {
+    "_id": 13,
+    "title": "Vacation Loan",
+    "description": "Enjoy your hol_idays without financial worry.",
+    "category": "Travel",
+    "interest": "12%",
+    "maxLoan": "$15,000",
+    "emiPlans": ["3 months", "6 months", "12 months"],
+    "image": "https://www.omozing.com/wp-content/uploads/2024/07/VACATION-LOAN-1024x640.jpg"
+  },
+  {
+    "_id": 14,
+    "title": "Emergency Loan",
+    "description": "Quick loans for unexpected emergencies.",
+    "category": "Personal",
+    "interest": "14%",
+    "maxLoan": "$25,000",
+    "emiPlans": ["3 months", "6 months", "12 months"],
+    "image": "https://amwslai.com.ph/wp-content/uploads/2024/07/EMERGENCY-LOAN-.jpg"
+  },
+  {
+    "_id": 15,
+    "title": "Green Energy Loan",
+    "description": "Finance solar panels and eco-friendly projects.",
+    "category": "Home",
+    "interest": "8%",
+    "maxLoan": "$100,000",
+    "emiPlans": ["1 year", "3 years", "5 years"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3VG_RpYhHoGkmvYGxFNqvAFdHrsEEptUC2A&s"
+  },
+  {
+    "_id": 16,
+    "title": "Electric Vehicle Loan",
+    "description": "Go green with EV loans.",
+    "category": "Vehicle",
+    "interest": "9%",
+    "maxLoan": "$50,000",
+    "emiPlans": ["12 months", "24 months", "36 months"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQmVYeXpAmuexlG4WEXlR90EIKFJVncwQ0lw&s"
+  },
+  {
+    "_id": 17,
+    "title": "Certification Loan",
+    "description": "Pay for professional courses and certifications.",
+    "category": "Education",
+    "interest": "11%",
+    "maxLoan": "$10,000",
+    "emiPlans": ["6 months", "12 months", "24 months"],
+    "image": "https://images.template.net/494998/Employment-Certificate-for-Bank-Loan-Template-edit-online.png"
+  },
+  {
+    "_id": 18,
+    "title": "Franchise Loan",
+    "description": "Open your own franchise easily.",
+    "category": "Business",
+    "interest": "12%",
+    "maxLoan": "$300,000",
+    "emiPlans": ["1 year", "3 years", "5 years"],
+    "image": "https://media.lendingkart.com/wp-content/uploads/2019/10/franchise-finance-1024x538.jpg"
+  },
+  {
+    "_id": 19,
+    "title": "Cruise Loan",
+    "description": "Luxury cruise vacations made affordable.",
+    "category": "Travel",
+    "interest": "13%",
+    "maxLoan": "$50,000",
+    "emiPlans": ["6 months", "12 months", "24 months"],
+    "image": "https://cruisefever.net/wp-content/uploads/2019/12/exploreroftheseas.jpg"
+  },
+  {
+    "_id": 20,
+    "title": "Emergency Car Repair Loan",
+    "description": "Fix your car instantly with a small loan.",
+    "category": "Vehicle",
+    "interest": "15%",
+    "maxLoan": "$5,000",
+    "emiPlans": ["3 months", "6 months", "12 months"],
+    "image": "https://24data-strapi-uploads.s3.amazonaws.com/snpm_NLJK_Sdm_Fix_PX_8h_Ql_9568e0dcac.jpg"
+  },
+  {
+    "_id": 21,
+    "title": "Home Appliance Loan",
+    "description": "Buy appliances with easy installments.",
+    "category": "Home",
+    "interest": "12%",
+    "maxLoan": "$10,000",
+    "emiPlans": ["6 months", "12 months", "24 months"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS023XuzOJT3feJsdfwuxHkSJ0uEQ_GEUbKhw&s"
+  },
+  {
+    "_id": 22,
+    "title": "Gadget Loan",
+    "description": "Finance your phones, tablets, and gadgets.",
+    "category": "Personal",
+    "interest": "13%",
+    "maxLoan": "$5,000",
+    "emiPlans": ["3 months", "6 months", "12 months"],
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?fit=crop&w=400&q=80"
+  },
+  {
+    "_id": 23,
+    "title": "Fitness Loan",
+    "description": "Invest in your health and gym memberships.",
+    "category": "Personal",
+    "interest": "10%",
+    "maxLoan": "$2,500",
+    "emiPlans": ["6 months", "12 months", "24 months"],
+    "image": "https://www.dmifinance.in/wp-content/uploads/2025/09/Blog-images-4.png"
+  },
+  {
+    "_id": 24,
+    "title": "Furniture Loan",
+    "description": "Upgrade your home furniture easily.",
+    "category": "Home",
+    "interest": "11%",
+    "maxLoan": "$15,000",
+    "emiPlans": ["6 months", "12 months", "24 months"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5FgOX9HXCnSHcDBlpS7wha5UXk7WPTV_rpQ&s"
+  },
+  {
+    "_id": 25,
+    "title": "Small Business Equipment Loan",
+    "description": "Buy essential equipment for your business.",
+    "category": "Business",
+    "interest": "12%",
+    "maxLoan": "$50,000",
+    "emiPlans": ["1 year", "3 years", "5 years"],
+    "image": "https://www.homecredit.co.in/sites/default/files/2025-03/equipment-loans-for-business-expansion-750x800.webp"
+  },
+  {
+    "_id": 26,
+    "title": "Adventure Trip Loan",
+    "description": "Finance your adventure trips easily.",
+    "category": "Travel",
+    "interest": "14%",
+    "maxLoan": "$20,000",
+    "emiPlans": ["3 months", "6 months", "12 months"],
+    "image": "https://loantap.in/wp-content/uploads/What-are-the-advantages-of-using-Travel-Loans.png"
+  },
+  
+    {
+      "_id": 27,
+      "title": "Renovation & Interior Loan",
+      "description": "Finance your home renovation and interior design projects.",
+      "category": "Home",
+      "interest": "9%",
+      "maxLoan": "$150,000",
+      "emiPlans": ["1 year", "3 years", "5 years"],
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPAtnU4tlnwNhQ0_HgPQXexbNQvmkLG9ey1Q&s"
+    },
+    {
+      "_id": 28,
+      "title": "Startup Expansion Loan",
+      "description": "Fund the growth and expansion of your startup business.",
+      "category": "Business",
+      "interest": "12%",
+      "maxLoan": "$200,000",
+      "emiPlans": ["1 year", "3 years", "5 years"],
+      "image": "https://cdn.shopify.com/s/files/1/0070/7032/articles/startup-business-loans_cdd58083-e190-47ca-b1c0-a25f1a318719.jpg?v=1744990411"
+    },
+    {
+      "_id": 29,
+      "title": "Destination Wedding Loan",
+      "description": "Plan a destination wedding without financial stress.",
+      "category": "Personal",
+      "interest": "13%",
+      "maxLoan": "$75,000",
+      "emiPlans": ["6 months", "12 months", "24 months"],
+      "image": "https://i.pinimg.com/736x/f3/47/f9/f347f9a65d1132da6ad9bf391b29c6cd.jpg"
+    },
+    {
+      "_id": 30,
+      "title": "Adventure Sports Loan",
+      "description": "Fund your adventure sports and extreme activities.",
+      "category": "Travel",
+      "interest": "14%",
+      "maxLoan": "$25,000",
+      "emiPlans": ["3 months", "6 months", "12 months"],
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDEPTEYy0ofmj_42FyJGH-6sS1ViLZZdVg4w&s"
+    }
+
+]

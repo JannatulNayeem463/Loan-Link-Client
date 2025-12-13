@@ -1,0 +1,59 @@
+[
+    {
+      "id": 1,
+      "name": "Super Admin",
+      "email": "admin@example.com",
+      "role": "admin",
+      "suspended": false
+    },
+    {
+      "id": 2,
+      "name": "Loan Manager",
+      "email": "manager@example.com",
+      "role": "manager",
+      "suspended": false
+    },
+    {
+      "id": 3,
+      "name": "Rahim Uddin",
+      "email": "rahim@example.com",
+      "role": "borrower",
+      "suspended": false
+    },
+    {
+      "id": 4,
+      "name": "Karim Khan",
+      "email": "karim@example.com",
+      "role": "borrower",
+      "suspended": true
+    },
+    {
+      "id": 5,
+      "name": "Sarah Noor",
+      "email": "sarah@example.com",
+      "role": "borrower",
+      "suspended": false
+    },
+    {
+      "id": 6,
+      "name": "Admin Two",
+      "email": "admin2@example.com",
+      "role": "admin",
+      "suspended": false
+    },
+    {
+      "id": 7,
+      "name": "Manager Two",
+      "email": "manager2@example.com",
+      "role": "manager",
+      "suspended": false
+    },
+    {
+      "id": 8,
+      "name": "Borrower Test",
+      "email": "borrower@example.com",
+      "role": "borrower",
+      "suspended": false
+    }
+  ]
+  

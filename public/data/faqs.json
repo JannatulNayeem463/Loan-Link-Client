@@ -1,0 +1,19 @@
+[
+    {
+      "question": "What is the minimum loan amount?",
+      "answer": "The minimum loan amount is $500."
+    },
+    {
+      "question": "How fast can I get approval?",
+      "answer": "Approval can take as little as 24 hours."
+    },
+    {
+      "question": "What documents are required?",
+      "answer": "ID, income proof, and bank account details are required."
+    },
+    {
+      "question": "Is the process secure?",
+      "answer": "Yes, we use bank-level encryption to protect your data."
+    }
+  ]
+  
