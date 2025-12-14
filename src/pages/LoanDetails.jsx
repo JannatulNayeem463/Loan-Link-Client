@@ -34,14 +34,21 @@ const LoanDetails = () => {
 
   return (
     <div className="p-6 max-w-3xl mx-auto bg-white shadow-lg rounded-lg mt-10">
-      <img src={loan.image} alt={loan.title} className="w-full h-64 object-cover rounded-lg" />
+      <img
+        src={loan.image || "/placeholder-image.jpg"}
+        alt={loan.title}
+        className="w-full h-64 object-cover rounded-lg"
+      />
       <h2 className="text-3xl font-bold mt-4">{loan.title}</h2>
       <p className="text-gray-700 mt-2">{loan.description}</p>
       <div className="mt-4 space-y-1 text-gray-700">
         <p><strong>Category:</strong> {loan.category}</p>
         <p><strong>Interest Rate:</strong> {loan.interest}</p>
         <p><strong>Max Limit:</strong> {loan.maxLoan}</p>
-        <p><strong>EMI Plans:</strong> {loan.emiPlans?.join(", ")}</p>
+        <p>
+          <strong>EMI Plans:</strong>{" "}
+          {Array.isArray(loan.emiPlans) ? loan.emiPlans.join(", ") : "N/A"}
+        </p>
       </div>
       <button
         onClick={handleApplyNow}
@@ -52,7 +59,11 @@ const LoanDetails = () => {
       >
         Apply Now
       </button>
-      {!canApply && <p className="text-red-500 mt-2 text-center">Only borrowers can apply for loans.</p>}
+      {!canApply && (
+        <p className="text-red-500 mt-2 text-center">
+          Only borrowers can apply for loans.
+        </p>
+      )}
     </div>
   );
 };

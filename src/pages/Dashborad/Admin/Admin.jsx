@@ -7,14 +7,14 @@ import { Link } from 'react-router'
 
 const Admin = () => {
   return (
-    <div className='max-w-7xl mx-auto'>
+    <div className='max-w-7xl bg-gray-200   mx-auto '>
      
-      <h3 className='text-center items-center mt-10 text-2xl font-bold pt-10 '> Admin Dashborad</h3>
+      <h3 className='text-center items-center mt-5 text-2xl font-bold pt-10 '> Admin Dashborad</h3>
          <p className='text-center'>Welcome Back, </p>
 
-    <div className='flex '>
+    <div className='flex mt-10 pb-5 '>
 
-    <div className="card mt-30 ml-5 bg-base-100 w-96 shadow-sm">
+    <div className="card  ml-5 bg-base-100 w-96 shadow-sm">
   
   <div className="card-body items-center text-center">
     <h2 className="card-title font-semibold">All Loans</h2>
@@ -26,7 +26,7 @@ const Admin = () => {
 </div>
 
 {/* 2 */}
-<div className="card mt-30 ml-5 bg-base-100 w-96 shadow-sm">
+<div className="card  ml-5 bg-base-100 w-96 shadow-sm">
   
   <div className="card-body items-center text-center">
     <h2 className="card-title font-semibold">Loan Application</h2>
@@ -36,7 +36,7 @@ const Admin = () => {
   </div>
 </div>
 {/* 3 */}
-<div className="card mt-30 ml-5 mr-5 bg-base-100 w-96 shadow-sm">
+<div className="card  ml-5 mr-5 bg-base-100 w-96 shadow-sm">
   
   <div className="card-body items-center text-center">
     <h2 className="card-title font-semibold">Manage Users</h2>

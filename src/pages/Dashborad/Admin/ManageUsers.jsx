@@ -11,7 +11,7 @@ const ManageUsers = () => {
       .catch((err) => console.error(err));
   }, []);
 
-  // Update Role Handler
+  // Update Role 
   const handleRoleUpdate = (id, newRole) => {
     const updatedUsers = users.map((u) =>
       u.id === id ? { ...u, role: newRole } : u

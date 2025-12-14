@@ -19,6 +19,15 @@ import AllLoansAdmin from "../pages/Dashborad/Admin/AllLoansAdmin";
 import LoanApplications from "../pages/Dashborad/Admin/LoanApplications";
 import EditLoan from "../pages/Dashborad/EditLoan";
 import EditLoans from "../pages/Dashborad/Admin/EditLoans";
+import Manager from "../pages/Dashborad/Manager/Manager";
+import AddLoan from "../pages/Dashborad/Manager/AddLoan";
+import ManageLoans from "../pages/Dashborad/Manager/ManageLoans";
+import UpdateLoan from "../pages/Dashborad/Manager/UpdateLoan";
+import PendingLoans from "../pages/Dashborad/Manager/PendingLoans";
+import ApprovedLoans from "../pages/Dashborad/Manager/ApprovedLoans";
+import MyLoans from "../pages/Dashborad/Borrower/MyLoans";
+import Borrower from "../pages/Dashborad/Borrower/Borrower";
+
 
 export const router = createBrowserRouter([
   {
@@ -106,6 +115,47 @@ export const router = createBrowserRouter([
       path: "editloan/:id",
         Component: EditLoans,
      },
+
+  //  manager
+  {
+    path:"manager",
+    Component: Manager,
+
+  },
+{
+  path:'add-loan',
+  Component: AddLoan,
+
+},
+{
+  path: "manage-loans",
+  Component: ManageLoans,
+},
+{
+  path:"update-loan/:id",
+  Component: UpdateLoan,
+},
+{
+path:"pending-loans",
+Component: PendingLoans,
+},
+
+{
+  path:"approved-loans",
+  Component:ApprovedLoans
+},
+
+// Borrower
+
+{
+path:"my-loans",
+Component: MyLoans,
+},
+{
+  path:"borrower",
+  Component:Borrower
+}
+
     ],
   },
 

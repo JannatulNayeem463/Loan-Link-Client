@@ -6,14 +6,14 @@ const AllLoans = () => {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
-  // View Details button handler
+  // View Details 
   const handleViewDetails = (loanId) => {
     navigate(`/loan/${loanId}`);
   };
 
-  // Fetch loans from server API
+  // Fetch loans 
   useEffect(() => {
-    fetch("http://localhost:5000/loans") // server API URL
+    fetch("http://localhost:5000/loans") 
       .then((res) => res.json())
       .then((data) => {
         setLoans(data);

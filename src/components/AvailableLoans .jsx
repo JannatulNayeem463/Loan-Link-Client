@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const AvailableLoans = () => {
   const [loans, setLoans] = useState([]);
-  const navigate = useNavigate(); // <-- ADD THIS
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     fetch("http://localhost:5000/loans")
@@ -12,9 +12,9 @@ const AvailableLoans = () => {
       .catch((err) => console.error(err));
   }, []);
 
-  // Handle View Details click
+  //  View Details 
   const handleViewDetails = (id) => {
-    navigate(`/loan/${id}`); // <-- NAVIGATE TO LOAN DETAILS
+    navigate(`/loan/${id}`); 
   };
 
   return (
@@ -42,7 +42,7 @@ const AvailableLoans = () => {
                 <p className="font-bold mb-4">Max Loan: {loan.maxLoan}</p>
 
                 <button
-                  onClick={() => handleViewDetails(loan._id)} // <-- FIXED
+                  onClick={() => handleViewDetails(loan._id)} 
                   className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 mt-4 w-full rounded-md font-semibold transition"
                   >
                   View Details

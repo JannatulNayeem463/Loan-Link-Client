@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 const ManageUsers = () => {
   const [users, setUsers] = useState([]);
 
-  // Fetch users from server
+  // Fetch users server
   useEffect(() => {
     fetch("http://localhost:5000/api/users")
       .then((res) => res.json())
@@ -12,7 +12,7 @@ const ManageUsers = () => {
       .catch((err) => console.error(err));
   }, []);
 
-  // Update Role Handler
+  // Update Role 
   const handleRoleUpdate = async (_id, newRole) => {
     // API Call
     await fetch(`http://localhost:5000/api/users/role/${_id}`, {
