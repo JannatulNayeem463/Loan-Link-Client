@@ -23,7 +23,7 @@ const CustomerFeedback = () => {
           loop={true}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           breakpoints={{
-            0: { slidesPerView: 1 },      
+            0: { slidesPerView: 1 },     
             640: { slidesPerView: 2 },  
             1024: { slidesPerView: 3 },   
             1280: { slidesPerView: 4 },   

@@ -27,6 +27,10 @@ import PendingLoans from "../pages/Dashborad/Manager/PendingLoans";
 import ApprovedLoans from "../pages/Dashborad/Manager/ApprovedLoans";
 import MyLoans from "../pages/Dashborad/Borrower/MyLoans";
 import Borrower from "../pages/Dashborad/Borrower/Borrower";
+import ApplyLoan from "../components/ApplyLoan";
+import PaymentSuccess from "../components/Payment/PaymentSuccess";
+import PaymentModal from "../components/Payment/PaymentModal";
+import Profile from "../components/profile";
 
 
 export const router = createBrowserRouter([
@@ -63,7 +67,10 @@ export const router = createBrowserRouter([
         Component: LoanApplicationForm,
        },
 
-      
+      {
+        path:"apply-loan",
+        Component: ApplyLoan,
+      },
 
     ],
   },
@@ -154,6 +161,18 @@ Component: MyLoans,
 {
   path:"borrower",
   Component:Borrower
+},
+{
+  path:"payment-success",
+  Component: PaymentSuccess
+},
+{
+  path:"payment-modal",
+  Component: PaymentModal
+},
+{
+path:"profile",
+Component: Profile
 }
 
     ],

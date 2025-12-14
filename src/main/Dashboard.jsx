@@ -7,7 +7,7 @@ import { IoMdHome } from 'react-icons/io';
 import { CiSettings } from 'react-icons/ci';
 import DashboardOverview from '../pages/Dashborad/DashboardOverview';
 import UserRoleSummary from '../pages/Dashborad/UserRoleSummary';
-
+import { CgProfile } from "react-icons/cg";
 
 const Dashboard = () => {
     return (
@@ -44,7 +44,7 @@ const Dashboard = () => {
                 <label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay"></label>
                 <div className="flex min-h-full flex-col items-start bg-base-200 is-drawer-close:w-14 is-drawer-open:w-64">
                     {/* Sidebar content here */}
-                    <ul className="menu w-full grow pt-10">
+                    <ul className="menu w-full grow pt-5">
                         {/* List item */}
                         <li>
                             <Link to="/" className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Home">
@@ -82,14 +82,18 @@ const Dashboard = () => {
                         {/* List item */}
 
                         <li>
-                            <button className="is-drawer-close:tooltip is-drawer-close:tooltip-right mt-80 pt-2 pb-2" data-tip="Settings">
+                            <button className="is-drawer-close:tooltip is-drawer-close:tooltip-right mt-60 pt-2 pb-2" data-tip="Settings">
                                 {/* Settings icon */}
                                 <CiSettings />
                                 <span className="is-drawer-close:hidden font-semibold">Settings</span>
-
-
                             </button>
                         </li>
+                       <li>
+                       <Link to="/dashboard/profile" className="is-drawer-close:tooltip is-drawer-close:tooltip-right pt-3" data-tip="Profile">
+                       <CgProfile />
+                                <span className="is-drawer-close:hidden font-bold">Profile</span>
+                            </Link>
+                       </li>
                     </ul>
                 </div>
             </div>

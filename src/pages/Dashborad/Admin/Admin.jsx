@@ -7,7 +7,7 @@ import { Link } from 'react-router'
 
 const Admin = () => {
   return (
-    <div className='max-w-7xl bg-gray-200   mx-auto '>
+    <div className='max-w-7xl bg-gray-200 ml-10 mr-10 mt-10 rounded-2xl  mx-auto '>
      
       <h3 className='text-center items-center mt-5 text-2xl font-bold pt-10 '> Admin Dashborad</h3>
          <p className='text-center'>Welcome Back, </p>
