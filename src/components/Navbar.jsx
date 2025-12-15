@@ -3,21 +3,20 @@ import "./navber.css"
 import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
 import { AuthContext } from "../contexts/AuthContext/AuthContext";
+import { MdDarkMode, MdOutlineLightMode } from "react-icons/md";
 
 function Navbar() {
   const { user, logOut } = useContext(AuthContext);
 
   
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
-
- 
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
+    document.body.className = theme === "dark" ? "dark-theme" : "light-theme";
     localStorage.setItem("theme", theme);
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
   const beforeLoginLinks = (
@@ -61,9 +60,12 @@ function Navbar() {
       {/* Navbar End */}
       <div className="navbar-end gap-3">
         {/* Theme Toggle */}
-        <button className="btn" onClick={toggleTheme}>
-          {theme === "light" ? "🌙" : "☀️"}
-        </button>
+        <button
+            onClick={toggleTheme}
+            className="px-3 py-3 rounded-full bg-gray-800 text-white dark:bg-gray-300 dark:text-black transition-colors"
+          >
+            {theme === "light" ? <MdOutlineLightMode /> : <MdDarkMode /> }
+          </button>
 
         {/* User Area */}
         {user ? (
