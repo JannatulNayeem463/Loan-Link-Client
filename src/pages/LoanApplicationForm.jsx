@@ -55,7 +55,7 @@ const LoanApplicationForm = () => {
 
       if (res.ok) {
         Swal.fire("Success", "Loan application submitted!", "success");
-        navigate("/my-loans");
+        navigate("/dashboard/my-loans");
       } else {
         Swal.fire("Error", data.message, "error");
       }

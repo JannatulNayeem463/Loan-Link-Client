@@ -100,7 +100,7 @@ const AddLoan = () => {
             Show on Home
           </label>
 
-          <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Add Loan</button>
+          <button type="submit" className="w-full bg-cyan-500 text-white p-2 rounded hover:bg-cyan-600">Add Loan</button>
         </form>
       </div>
       <ToastContainer />

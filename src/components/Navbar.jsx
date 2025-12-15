@@ -4,11 +4,13 @@ import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
 import { AuthContext } from "../contexts/AuthContext/AuthContext";
 import { MdDarkMode, MdOutlineLightMode } from "react-icons/md";
+import useRole from "../hooks/useRole"
 
 function Navbar() {
   const { user, logOut } = useContext(AuthContext);
 
-  
+    const [role, isLoading] = useRole();
+console.log(role)
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   useEffect(() => {
     document.body.className = theme === "dark" ? "dark-theme" : "light-theme";
@@ -73,11 +75,9 @@ function Navbar() {
             {/*  tooltip */}
             <div className="relative group">
               <div className="avatar online w-10 h-10 rounded-full bg-neutral text-white flex items-center justify-center cursor-pointer overflow-hidden">
-                {user.photoURL ? (
+                
                   <img src={user.photoURL} alt="user" />
-                ) : (
-                  <span className="text-lg font-bold">{user.displayName?.[0]?.toUpperCase() || "U"}</span>
-                )}
+                
               </div>
 
               {/* Tooltip below avatar */}

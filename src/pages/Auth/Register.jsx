@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import SocialLogin from './SocialLogin';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import axios from "axios"
 const Register = () => {
     const navigate = useNavigate();
 
@@ -18,31 +18,37 @@ const Register = () => {
 
   const { registerUser, updateUserProfile } = useAuth();
 
-  const handleRegistration = async (data) => {
-    try {
-    
-      const user = await registerUser(data.email, data.password, data.name, data.photoURL)
-      
+const handleRegistration = async (data) => {
+  try {
+    const result = await registerUser(data.email, data.password);
+    const loggedUser = result.user;
 
-    
-      const saveUser = {
-        name: data.name,
-        email: data.email,
-        role: data.role,
-        photoURL: data.photoURL,
-      };
+    await updateUserProfile(data.name, data.photoURL);
 
 
-      console.log(user)
-        console.log(saveUser)
-      toast.success("Registration successful!");
-            
-      navigate("/");      
-    } catch (error) {
-      toast.error(error.message);
-      console.log(error);
-    }
-  };
+    const saveUser = {
+      name: data.name,
+      email: data.email,
+      role: data.role,
+      photo: data.photoURL,
+    };
+
+
+    const res = await axios.post(
+      "http://localhost:5000/users",
+      saveUser
+    );
+
+    console.log("Auth User:", loggedUser);
+    console.log("Saved User:", res.data);
+
+    toast.success("Registration successful!");
+    navigate("/");
+  } catch (error) {
+    console.error(error);
+    toast.error(error.message);
+  }
+};
 
   return (
     <div>
@@ -69,6 +75,7 @@ const Register = () => {
           <select {...register('role')} className="input">
             <option value="borrower">Borrower</option>
             <option value="manager">Manager</option>
+            <option value="admin">Admin</option>
           </select>
          
           <label className="label">Password</label>

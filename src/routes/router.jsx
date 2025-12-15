@@ -14,7 +14,7 @@ import LoanApplicationForm from "../pages/LoanApplicationForm";
 import PrivateRoute from "./PrivateRoute";
 import ManageUsers from "../pages/Dashborad/Admin/ManageUsers";
 import Admin from "../pages/Dashborad/Admin/Admin";
-import AdminProfile from "../pages/Dashborad/Admin/AdminProfile";
+
 import AllLoansAdmin from "../pages/Dashborad/Admin/AllLoansAdmin";
 import LoanApplications from "../pages/Dashborad/Admin/LoanApplications";
 import EditLoan from "../pages/Dashborad/EditLoan";
@@ -102,10 +102,7 @@ export const router = createBrowserRouter([
       path: 'manage-users',
      Component: ManageUsers,
      },
-     {
-      path:"admin-profile",
-      Component: AdminProfile,
-     },
+   
      {
       path: "all-loan",
       Component: AllLoansAdmin,
@@ -113,10 +110,6 @@ export const router = createBrowserRouter([
      {
      path:"loan-application",
      Component: LoanApplications,
-     },
-     {
-       path: "edit-loan/:id",
-        Component: EditLoan,
      },
      {
       path: "editloan/:id",

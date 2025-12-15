@@ -1,110 +1,106 @@
-import React from 'react'
-import "../../src/components/navber.css"
-import { Link, Outlet } from 'react-router'
-import { MdOutlineAdminPanelSettings } from "react-icons/md";
-import { GrUserManager } from 'react-icons/gr';
-import { BiAnalyse } from 'react-icons/bi';
-import { IoMdHome } from 'react-icons/io';
-import { CiSettings } from 'react-icons/ci';
-import DashboardOverview from '../pages/Dashborad/DashboardOverview';
-import UserRoleSummary from '../pages/Dashborad/UserRoleSummary';
+// src/main/Dashboard.jsx
+import React from "react";
+import { Link, Outlet } from "react-router-dom";
+import {
+  MdOutlineAdminPanelSettings,
+} from "react-icons/md";
+import { GrUserManager } from "react-icons/gr";
+import { BiAnalyse } from "react-icons/bi";
+import { IoMdHome } from "react-icons/io";
+import { CiSettings } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
-import DarkLight from '../components/DarkLight';
+import DarkLight from "../components/DarkLight";
+import useAuth from "../hooks/useAuth";
+import useRole from "../hooks/useRole";
+
+const sidebarRoutes = {
+  admin: [
+    { to: "/dashboard/admin", label: "Admin Dashboard", icon: <MdOutlineAdminPanelSettings /> },
+    { to: "/dashboard/manage-users", label: "Manage Users", icon: <GrUserManager /> },
+    { to: "/dashboard/all-loan", label: "All Loans", icon: <BiAnalyse /> },
+    { to: "/dashboard/loan-application", label: "Loan Applications", icon: <BiAnalyse /> },
+  ],
+
+  manager: [
+    { to: "/dashboard/manager", label: "Manager Dashboard", icon: <GrUserManager /> },
+    { to: "/dashboard/add-loan", label: "Add Loan", icon: <BiAnalyse /> },
+    { to: "/dashboard/manage-loans", label: "Manage Loans", icon: <BiAnalyse /> },
+    { to: "/dashboard/pending-loans", label: "Pending Loans", icon: <BiAnalyse /> },
+    { to: "/dashboard/approved-loans", label: "Approved Loans", icon: <BiAnalyse /> },
+  ],
+
+  borrower: [
+    { to: "/dashboard/borrower", label: "Borrower Dashboard", icon: <BiAnalyse /> },
+    { to: "/dashboard/my-loans", label: "My Loans", icon: <BiAnalyse /> },
+
+  ],
+};
 
 const Dashboard = () => {
-    return (
-        <div className="drawer lg:drawer-open ">
-            <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
-            <div className="drawer-content ">
+   const [role, isLoading] = useRole();
 
-                <nav className="navbar w-full bg-base-300" aria-label="open sidebar flex justify-between   ">
-                    <label htmlFor="my-drawer-4" aria-label="open sidebar" className="btn btn-square btn-ghost">
+  return (
+    <div className="drawer lg:drawer-open">
+      <input id="dashboard-drawer" type="checkbox" className="drawer-toggle" />
 
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeLinejoin="round" strokeLinecap="round" strokeWidth="2" fill="none" stroke="currentColor" className="my-1.5 inline-block size-4"><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path><path d="M9 4v16"></path><path d="M14 10l2 2l-2 2"></path></svg>
-                    </label>
-                   
-                    <div className="px-4 text-3xl font-bold"><span className="text-cyan-400">LoanLink</span> Dashboard</div>
-                    <DarkLight></DarkLight>
-                    
-                </nav>
-                {/* page content */}
-                <div className=' mt-5 mr-5 ml-5'>
-                <UserRoleSummary></UserRoleSummary>
-                </div>
+      {/* CONTENT */}
+      <div className="drawer-content flex flex-col">
+        <nav className="navbar bg-base-300">
+          <label htmlFor="dashboard-drawer" className="btn btn-ghost btn-square">
+            ☰
+          </label>
+          <h2 className="text-2xl font-bold">
+            <span className="text-cyan-400">LoanLink</span> Dashboard
+          </h2>
+          <DarkLight />
+        </nav>
 
-                <div >
-                    <Outlet></Outlet>
-                </div>
-                
-                <div className='mr-5 ml-5  mt-20 '>
-                <DashboardOverview></DashboardOverview>
-                </div>
-            </div>
-
-               
-
-
-
-            <div className="drawer-side is-drawer-close:overflow-visible">
-                <label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay"></label>
-                <div className="flex min-h-full flex-col items-start bg-base-200 is-drawer-close:w-14 is-drawer-open:w-64">
-                    {/* Sidebar content here */}
-                    <ul className="menu w-full grow pt-5">
-                        {/* List item */}
-                        <li>
-                            <Link to="/" className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Home">
-                                {/* Home icon */}
-                                <IoMdHome />
-                                <span className="is-drawer-close:hidden font-semibold">Home</span>
-                            </Link>
-                        </li>
-
-
-                        <li>
-                            <Link to="/dashboard/admin" className="is-drawer-close:tooltip is-drawer-close:tooltip-right mt-10 pt-3" data-tip="Admin">
-                                {/* admin icon */}
-
-                                <MdOutlineAdminPanelSettings />
-                                <span className="is-drawer-close:hidden font-bold ">Admin</span>
-                            </Link>
-                        </li>
-
-                        <li>
-                            <Link to="/dashboard/manager" className="is-drawer-close:tooltip is-drawer-close:tooltip-right pt-3" data-tip="Manager">
-                                {/* Manager icon */}
-                                <GrUserManager />
-                                <span className="is-drawer-close:hidden font-bold">Manager</span>
-                            </Link>
-                        </li>
-
-                        <li>
-                            <Link to="/dashboard/borrower" className="is-drawer-close:tooltip is-drawer-close:tooltip-right pt-3" data-tip="Borrower">
-                                {/* Borrower icon */}
-                                <BiAnalyse />
-                                <span className="is-drawer-close:hidden font-bold">Borrower</span>
-                            </Link>
-                        </li>
-                        {/* List item */}
-
-                        <li>
-                            <button className="is-drawer-close:tooltip is-drawer-close:tooltip-right mt-60 pt-2 pb-2" data-tip="Settings">
-                                {/* Settings icon */}
-                                <CiSettings />
-                                <span className="is-drawer-close:hidden font-semibold">Settings</span>
-                            </button>
-                        </li>
-                       <li>
-                       <Link to="/dashboard/profile" className="is-drawer-close:tooltip is-drawer-close:tooltip-right pt-3" data-tip="Profile">
-                       <CgProfile />
-                                <span className="is-drawer-close:hidden font-bold">Profile</span>
-                            </Link>
-                       </li>
-                    
-                    </ul>
-                </div>
-            </div>
+        <div className="p-6">
+          <Outlet />
         </div>
-    )
-}
+      </div>
 
-export default Dashboard
+      {/* SIDEBAR */}
+      <div className="drawer-side">
+        <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
+
+        <ul className="menu w-64 bg-base-200 p-4 min-h-full">
+          <li>
+            <Link to="/">
+              <IoMdHome /> Home
+            </Link>
+          </li>
+
+          <div className="divider"></div>
+
+          {sidebarRoutes[role]?.map((item, index) => (
+            <li key={index}>
+              <Link to={item.to}>
+                {item.icon}
+                <span className="font-semibold">{item.label}</span>
+              </Link>
+            </li>
+          ))}
+        <div className="divider"></div>
+
+        {/* ✅ COMMON PROFILE (ALL ROLES) */}
+        <li>
+            <Link to="/dashboard/profile">
+            <CgProfile />
+            <span className="font-semibold">Profile</span>
+            </Link>
+        </li>
+          <div className="mt-auto">
+            <li>
+              <button>
+                <CiSettings /> Settings
+              </button>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default Dashboard;

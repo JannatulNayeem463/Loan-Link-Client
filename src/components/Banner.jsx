@@ -5,7 +5,7 @@ const Banner = () => {
   const navigate = useNavigate();
 
   const handleApply = () => {
-    navigate("/apply-loan"); 
+    navigate("/all-loans"); 
   };
 
   const handleExplore = () => {

@@ -88,7 +88,7 @@ const ManageLoans = () => {
                 <td className="py-2 px-4 border">{loan.category}</td>
                 <td className="py-2 px-4 border space-x-2">
                   <button
-                    onClick={() => navigate(`update-loan/${loan._id}`)}
+                    onClick={() => navigate(`/dashboard/update-loan/${loan._id}`)}
                     className="px-3 py-1 bg-yellow-500 text-white rounded hover:bg-yellow-600"
                   >
                     Update

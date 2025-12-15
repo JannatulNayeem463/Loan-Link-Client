@@ -78,7 +78,7 @@ const Contact = () => {
                 type="email"
                 name="email"
                 className="w-full mt-2 px-4 py-3 border border-gray-300 rounded-lg 
-                focus:ring-2 focus:ring-blue-500 outline-none"
+                focus:ring-2 focus:ring-cyan-500 outline-none"
                 value={formData.email}
                 onChange={handleChange}
                 required
@@ -92,7 +92,7 @@ const Contact = () => {
                 rows="5"
                 placeholder="Write your message here..."
                 className="w-full mt-2 px-4 py-3 border border-gray-300 rounded-lg 
-                focus:ring-2 focus:ring-blue-500 outline-none"
+                focus:ring-2 focus:ring-cyan-500 outline-none"
                 value={formData.message}
                 onChange={handleChange}
                 required

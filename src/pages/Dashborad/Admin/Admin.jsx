@@ -1,5 +1,4 @@
 import React from 'react'
-import AdminProfile from './AdminProfile'
 import AllLoansAdmin from './AllLoansAdmin'
 import LoanApplications from './LoanApplications'
 import ManageUsers from './ManageUsers'

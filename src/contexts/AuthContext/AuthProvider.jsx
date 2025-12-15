@@ -56,7 +56,12 @@ const AuthProvider = ({children}) => {
     console.error("Logout Error:", error.code, error.message);
   }
 };
-
+  const updateUserProfile = (name, photo) => {
+    return updateProfile(auth.currentUser, {
+      displayName: name,
+      photoURL: photo,
+    });
+  };
 //observe user state
      useEffect(() => {
           const unSubscribe = onAuthStateChanged(auth, (currentUser) =>{
@@ -75,7 +80,8 @@ const AuthProvider = ({children}) => {
       registerUser,
        signInuser,
        signInGoogle,
-       logOut
+       logOut,
+       updateUserProfile
     }
   return (
 

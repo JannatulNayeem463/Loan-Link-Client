@@ -20,7 +20,7 @@ const CustomerFeedback = () => {
         <Swiper
           modules={[Autoplay]}
           spaceBetween={30}
-          loop={true}
+          loop={feedbacks.length > 3} 
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           breakpoints={{
             0: { slidesPerView: 1 },     

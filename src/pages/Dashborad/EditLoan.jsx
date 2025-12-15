@@ -61,7 +61,7 @@ const EditLoan = () => {
 
   return (
     <div className="max-w-3xl mx-auto p-6">
-      <h2 className="text-3xl font-bold text-center mb-6">Edit Loan</h2>
+      <h2 className="text-3xl font-bold text-center  mb-6">Edit Loan</h2>
 
       <form onSubmit={handleUpdate} className="space-y-4 bg-white p-6 shadow rounded">
         <div>
@@ -141,7 +141,7 @@ const EditLoan = () => {
           />
         </div>
 
-        <button className="btn btn-primary w-full">Update Loan</button>
+        <button className="btn bg-cyan-400 w-full">Update Loan</button>
       </form>
     </div>
   );

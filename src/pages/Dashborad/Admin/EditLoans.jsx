@@ -100,7 +100,7 @@ const EditLoans = () => {
 
         <button
           type="submit"
-          className="btn bg-blue-500 text-white w-full"
+          className="btn bg-cyan-500 text-white w-full"
         >
           Update Loan
         </button>

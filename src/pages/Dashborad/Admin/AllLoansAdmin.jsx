@@ -22,12 +22,12 @@ const AllLoansAdmin = () => {
       });
   }, []);
 
-  // 🔹 Update Loan (redirect to edit page)
+  
   const handleEdit = (id) => {
-    navigate(`/dashboard/edit-loan/${id}`);
+    navigate(`/dashboard/editloan/${id}`);
   };
 
-  // 🔹 Delete Loan
+  // 🔹 Delete 
   const handleDelete = (id) => {
     Swal.fire({
       title: "Are you sure?",
@@ -53,7 +53,7 @@ const AllLoansAdmin = () => {
     });
   };
 
-  // 🔹 Toggle Show on Home
+  //  Toggle Show on Home
   const handleShowOnHome = (id, value) => {
     fetch(`http://localhost:5000/loans/${id}/show-on-home`, {
       method: "PATCH",
@@ -80,7 +80,7 @@ const AllLoansAdmin = () => {
 
   return (
     <div className="p-6">
-      <h2 className="text-3xl font-bold mb-6 text-center">Manage All Loans</h2>
+      <h2 className="text-3xl font-bold mb-6 text-center"> All Loans</h2>
 
       <div className="overflow-x-auto shadow-lg">
         <table className="table w-full">
@@ -124,13 +124,14 @@ const AllLoansAdmin = () => {
                 </td>
 
                 <td className="flex gap-2">
-                  <button
+                 
+                 <button
                     onClick={() => handleEdit(loan._id)}
                     className="btn btn-sm btn-primary"
                   >
                     Edit
                   </button>
-
+                 
                   <button
                     onClick={() => handleDelete(loan._id)}
                     className="btn btn-sm btn-error text-white"
