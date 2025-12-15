@@ -20,7 +20,7 @@ const UpdateLoan = () => {
   });
 
   useEffect(() => {
-    fetch(`http://localhost:5000/loans/${id}`)
+    fetch(`https://loan-link-server-ruby.vercel.app/loans/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setLoan(data);
@@ -29,14 +29,14 @@ const UpdateLoan = () => {
         const emiPlansString = Array.isArray(data.emiPlans)
           ? data.emiPlans.join(", ")
           : typeof data.emiPlans === "string"
-          ? data.emiPlans
-          : "";
+            ? data.emiPlans
+            : "";
 
         const requiredDocsString = Array.isArray(data.requiredDocs)
           ? data.requiredDocs.join(", ")
           : typeof data.requiredDocs === "string"
-          ? data.requiredDocs
-          : "";
+            ? data.requiredDocs
+            : "";
 
         setFormData({
           title: data.title || "",
@@ -85,7 +85,7 @@ const UpdateLoan = () => {
     }
 
     try {
-      const res = await fetch(`http://localhost:5000/loans/${id}`, {
+      const res = await fetch(`https://loan-link-server-ruby.vercel.app/loans/${id}`, {
         method: "PUT",
         body: data,
       });

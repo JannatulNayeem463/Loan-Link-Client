@@ -6,7 +6,7 @@ const ManageUsers = () => {
 
   // Fetch users server
   useEffect(() => {
-    fetch("http://localhost:5000/api/users")
+    fetch("https://loan-link-server-ruby.vercel.app/api/users")
       .then((res) => res.json())
       .then((data) => setUsers(data))
       .catch((err) => console.error(err));
@@ -15,7 +15,7 @@ const ManageUsers = () => {
   // Update Role 
   const handleRoleUpdate = async (_id, newRole) => {
     // API Call
-    await fetch(`http://localhost:5000/api/users/role/${_id}`, {
+    await fetch(`https://loan-link-server-ruby.vercel.app/api/users/role/${_id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ role: newRole }),
@@ -38,7 +38,7 @@ const ManageUsers = () => {
   const handleToggleSuspend = async (_id, current) => {
     const newStatus = !current;
 
-    await fetch(`http://localhost:5000/api/users/suspend/${_id}`, {
+    await fetch(`https://loan-link-server-ruby.vercel.app/api/users/suspend/${_id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ suspended: newStatus }),
@@ -90,7 +90,7 @@ const ManageUsers = () => {
                 </td>
 
                 <td className="flex gap-3 justify-center">
-                  
+
                   {/* Role Select */}
                   <select
                     className="select select-bordered"
@@ -109,9 +109,8 @@ const ManageUsers = () => {
                     onClick={() =>
                       handleToggleSuspend(user._id, user.suspended)
                     }
-                    className={`btn ${
-                      user.suspended ? "btn-success" : "btn-error"
-                    }`}
+                    className={`btn ${user.suspended ? "btn-success" : "btn-error"
+                      }`}
                   >
                     {user.suspended ? "Unsuspend" : "Suspend"}
                   </button>

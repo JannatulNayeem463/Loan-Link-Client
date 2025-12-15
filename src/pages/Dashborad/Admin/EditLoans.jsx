@@ -10,7 +10,7 @@ const EditLoans = () => {
 
   // Fetch loan data
   useEffect(() => {
-    fetch(`http://localhost:5000/loans/${id}`)
+    fetch(`https://loan-link-server-ruby.vercel.app/loans/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setLoan(data);
@@ -21,7 +21,7 @@ const EditLoans = () => {
   const handleUpdate = (e) => {
     e.preventDefault();
 
-    fetch(`http://localhost:5000/loans/${id}`, {
+    fetch(`https://loan-link-server-ruby.vercel.app/loans/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(loan),

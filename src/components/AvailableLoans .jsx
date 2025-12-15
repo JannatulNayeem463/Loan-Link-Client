@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom";
 
 const AvailableLoans = () => {
   const [loans, setLoans] = useState([]);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:5000/loans")
+    fetch("https://loan-link-server-ruby.vercel.app/loans")
       .then((res) => res.json())
       .then((data) => setLoans(data.slice(0, 6)))
       .catch((err) => console.error(err));
@@ -14,7 +14,7 @@ const AvailableLoans = () => {
 
   //  View Details 
   const handleViewDetails = (id) => {
-    navigate(`/loan/${id}`); 
+    navigate(`/loan/${id}`);
   };
 
   return (
@@ -42,9 +42,9 @@ const AvailableLoans = () => {
                 <p className="font-bold mb-4">Max Loan: {loan.maxLoan}</p>
 
                 <button
-                  onClick={() => handleViewDetails(loan._id)} 
+                  onClick={() => handleViewDetails(loan._id)}
                   className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 mt-4 w-full rounded-md font-semibold transition"
-                  >
+                >
                   View Details
                 </button>
 

@@ -6,7 +6,7 @@ const ApprovedLoans = () => {
 
   const fetchApprovedLoans = async () => {
     try {
-      const res = await fetch("http://localhost:5000/applications?status=Approved");
+      const res = await fetch("https://loan-link-server-ruby.vercel.app/applications?status=Approved");
       const data = await res.json();
       setApplications(data);
       setLoading(false);

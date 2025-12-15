@@ -2,16 +2,16 @@ import { useEffect } from "react";
 import axios from "axios";
 
 const useAxiosSecure = () => {
-  
+
   const axiosSecure = axios.create({
-    baseURL: "http://localhost:5000", 
+    baseURL: "https://loan-link-server-ruby.vercel.app",
   });
 
   useEffect(() => {
-    
+
     axiosSecure.interceptors.request.use(
       (config) => {
-        const token = localStorage.getItem("accessToken"); 
+        const token = localStorage.getItem("accessToken");
         if (token) {
           config.headers.Authorization = `Bearer ${token}`;
         }

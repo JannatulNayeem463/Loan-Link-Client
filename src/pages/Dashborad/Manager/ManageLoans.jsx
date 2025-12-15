@@ -12,7 +12,7 @@ const ManageLoans = () => {
 
   // Fetch all loans
   useEffect(() => {
-    fetch("http://localhost:5000/loans") 
+    fetch("https://loan-link-server-ruby.vercel.app/loans")
       .then((res) => res.json())
       .then((data) => {
         setLoans(data);
@@ -31,7 +31,7 @@ const ManageLoans = () => {
   };
 
   const confirmDelete = () => {
-    fetch(`http://localhost:5000/loans/${selectedLoan._id}`, {
+    fetch(`https://loan-link-server-ruby.vercel.app/loans/${selectedLoan._id}`, {
       method: "DELETE",
     })
       .then(() => {

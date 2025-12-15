@@ -22,7 +22,7 @@ const LoanApplicationForm = () => {
   });
 
   useEffect(() => {
-    fetch(`http://localhost:5000/loans/${id}`)
+    fetch(`https://loan-link-server-ruby.vercel.app/loans/${id}`)
       .then((res) => res.json())
       .then((data) => setLoan(data))
       .catch(console.error);
@@ -46,7 +46,7 @@ const LoanApplicationForm = () => {
     };
 
     try {
-      const res = await fetch("http://localhost:5000/applications", {
+      const res = await fetch("https://loan-link-server-ruby.vercel.app/applications", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(application),

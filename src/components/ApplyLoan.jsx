@@ -26,7 +26,7 @@ const ApplyLoan = () => {
 
   // 🔹 Fetch single loan by id
   useEffect(() => {
-    fetch(`http://localhost:5000/loans/${id}`)
+    fetch(`https://loan-link-server-ruby.vercel.app/loans/${id}`)
       .then(res => res.json())
       .then(data => {
         setLoan(data);
@@ -43,43 +43,43 @@ const ApplyLoan = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
- const handleSubmit = async (e) => {
-  e.preventDefault();
-  if (!loan || !user) return;
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!loan || !user) return;
 
-  const application = {
-    ...formData,
-    amount: formData.loanAmount,
-    email: user.email,
-    userEmail: user.email,
-    loanId: loan._id,
-    loanTitle: loan.title,
-    interestRate: loan.interestRate,
-    status: "Pending",
-    applicationFeeStatus: "Unpaid",
-    createdAt: new Date(),
-  };
+    const application = {
+      ...formData,
+      amount: formData.loanAmount,
+      email: user.email,
+      userEmail: user.email,
+      loanId: loan._id,
+      loanTitle: loan.title,
+      interestRate: loan.interestRate,
+      status: "Pending",
+      applicationFeeStatus: "Unpaid",
+      createdAt: new Date(),
+    };
 
-  try {
-    const res = await fetch("http://localhost:5000/applications", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(application),
-    });
+    try {
+      const res = await fetch("https://loan-link-server-ruby.vercel.app/applications", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(application),
+      });
 
-    const data = await res.json();
+      const data = await res.json();
 
-    if (res.ok) {
-      Swal.fire("Success", "Loan application submitted!", "success");
-      navigate("/dashboard/my-loans");
-    } else {
-      Swal.fire("Error", data.message || "Failed", "error");
+      if (res.ok) {
+        Swal.fire("Success", "Loan application submitted!", "success");
+        navigate("/dashboard/my-loans");
+      } else {
+        Swal.fire("Error", data.message || "Failed", "error");
+      }
+    } catch (err) {
+      console.error(err);
+      Swal.fire("Error", "Something went wrong!", "error");
     }
-  } catch (err) {
-    console.error(err);
-    Swal.fire("Error", "Something went wrong!", "error");
-  }
-};
+  };
 
   if (loading) return <p className="text-center mt-10">Loading...</p>;
 

@@ -10,7 +10,7 @@ const AllLoansAdmin = () => {
 
   // Fetch all loans
   useEffect(() => {
-    fetch("http://localhost:5000/loans")
+    fetch("https://loan-link-server-ruby.vercel.app/loans")
       .then((res) => res.json())
       .then((data) => {
         setLoans(data);
@@ -22,7 +22,7 @@ const AllLoansAdmin = () => {
       });
   }, []);
 
-  
+
   const handleEdit = (id) => {
     navigate(`/dashboard/editloan/${id}`);
   };
@@ -39,7 +39,7 @@ const AllLoansAdmin = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/loans/${id}`, {
+        fetch(`https://loan-link-server-ruby.vercel.app/loans/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -55,7 +55,7 @@ const AllLoansAdmin = () => {
 
   //  Toggle Show on Home
   const handleShowOnHome = (id, value) => {
-    fetch(`http://localhost:5000/loans/${id}/show-on-home`, {
+    fetch(`https://loan-link-server-ruby.vercel.app/loans/${id}/show-on-home`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ showOnHome: value }),
@@ -124,14 +124,14 @@ const AllLoansAdmin = () => {
                 </td>
 
                 <td className="flex gap-2">
-                 
-                 <button
+
+                  <button
                     onClick={() => handleEdit(loan._id)}
                     className="btn btn-sm btn-primary"
                   >
                     Edit
                   </button>
-                 
+
                   <button
                     onClick={() => handleDelete(loan._id)}
                     className="btn btn-sm btn-error text-white"

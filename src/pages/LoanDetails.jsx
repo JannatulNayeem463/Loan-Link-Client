@@ -17,7 +17,7 @@ const LoanDetails = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/loans/${id}`)
+    fetch(`https://loan-link-server-ruby.vercel.app/loans/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setLoan(data);

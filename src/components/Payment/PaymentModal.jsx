@@ -13,7 +13,7 @@ const PaymentModal = ({ application, onClose }) => {
     setError(null);
 
     axios
-      .get(`http://localhost:5000/applications/${application._id}/payment-details`)
+      .get(`https://loan-link-server-ruby.vercel.app/applications/${application._id}/payment-details`)
       .then((res) => {
         setDetails(res.data);
         setLoading(false);

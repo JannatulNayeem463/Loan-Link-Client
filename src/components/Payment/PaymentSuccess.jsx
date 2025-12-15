@@ -11,7 +11,7 @@ const PaymentSuccess = () => {
 
     if (sessionId) {
       axios.get(
-        `http://localhost:5000/payment-success?session_id=${sessionId}`
+        `https://loan-link-server-ruby.vercel.app/payment-success?session_id=${sessionId}`
       );
     }
 

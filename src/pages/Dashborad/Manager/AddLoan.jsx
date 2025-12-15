@@ -41,13 +41,13 @@ const AddLoan = () => {
             data.append("images", formData.images[i]);
           }
         } else if (key === "requiredDocs") {
-          data.append(key, formData[key].join(",")); 
+          data.append(key, formData[key].join(","));
         } else {
           data.append(key, formData[key]);
         }
       }
 
-      await axios.post("http://localhost:5000/loans", data, {
+      await axios.post("https://loan-link-server-ruby.vercel.app/loans", data, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

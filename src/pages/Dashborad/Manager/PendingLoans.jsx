@@ -6,7 +6,7 @@ const PendingLoans = () => {
 
   const fetchPendingLoans = async () => {
     try {
-      const res = await fetch("http://localhost:5000/pending-loans");
+      const res = await fetch("https://loan-link-server-ruby.vercel.app/pending-loans");
       const data = await res.json();
       setApplications(data);
       setLoading(false);
@@ -22,7 +22,7 @@ const PendingLoans = () => {
 
   const handleApprove = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/applications/${id}/approve`, {
+      const res = await fetch(`https://loan-link-server-ruby.vercel.app/applications/${id}/approve`, {
         method: "PATCH",
       });
       const result = await res.json();
@@ -38,7 +38,7 @@ const PendingLoans = () => {
 
   const handleReject = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/applications/${id}/reject`, {
+      const res = await fetch(`https://loan-link-server-ruby.vercel.app/applications/${id}/reject`, {
         method: "PATCH",
       });
       const result = await res.json();

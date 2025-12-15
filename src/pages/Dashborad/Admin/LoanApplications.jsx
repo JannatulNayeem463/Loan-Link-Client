@@ -9,7 +9,7 @@ const LoanApplications = () => {
     // Fetch applications
     const fetchApplications = async () => {
         setLoading(true);
-        let url = "http://localhost:5000/applications";
+        let url = "https://loan-link-server-ruby.vercel.app/applications";
         if (filterStatus) url += `?status=${filterStatus}`;
 
         const res = await fetch(url);

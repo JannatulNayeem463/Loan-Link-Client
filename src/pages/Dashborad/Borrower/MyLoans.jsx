@@ -11,13 +11,13 @@ const MyLoans = () => {
 
   const fetchMyLoans = async () => {
     if (!user?.email) return;
-console.log(user.email)
+    console.log(user.email)
     setLoading(true);
     setError("");
 
     try {
       const res = await fetch(
-        `http://localhost:5000/applications?email=${user.email}`
+        `https://loan-link-server-ruby.vercel.app/applications?email=${user.email}`
       );
 
       if (!res.ok) throw new Error("Failed to fetch loans");
@@ -37,7 +37,7 @@ console.log(user.email)
   }, [user?.email]);
 
   const handleCancel = (id) => {
-   navigator("dashbord/payment-success")
+    navigator("dashbord/payment-success")
 
     Swal.fire({
       title: "Cancel Loan?",
@@ -48,7 +48,7 @@ console.log(user.email)
     }).then(async (result) => {
       if (result.isConfirmed) {
         const res = await fetch(
-          `http://localhost:5000/applications/${id}/cancel`,
+          `https://loan-link-server-ruby.vercel.app/applications/${id}/cancel`,
           { method: "PATCH" }
         );
         const data = await res.json();
@@ -63,7 +63,7 @@ console.log(user.email)
 
   const handlePay = async (loan) => {
     const res = await fetch(
-      "http://localhost:5000/create-loan-fee-session",
+      "https://loan-link-server-ruby.vercel.app/create-loan-fee-session",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

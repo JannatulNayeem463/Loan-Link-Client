@@ -13,7 +13,7 @@ const AllLoans = () => {
 
   // Fetch loans 
   useEffect(() => {
-    fetch("http://localhost:5000/loans") 
+    fetch("https://loan-link-server-ruby.vercel.app/loans")
       .then((res) => res.json())
       .then((data) => {
         setLoans(data);
