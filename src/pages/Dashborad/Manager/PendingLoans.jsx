@@ -4,6 +4,8 @@ const PendingLoans = () => {
   const [applications, setApplications] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const [selectedApplication, setSelectedApplication] = useState(null);
+
   const fetchPendingLoans = async () => {
     try {
       const res = await fetch("https://loan-link-server-ruby.vercel.app/pending-loans");
@@ -90,7 +92,7 @@ const PendingLoans = () => {
                   Reject
                 </button>
                 <button
-                  onClick={() => alert("Redirect to Loan Details")}
+                  onClick={() => setSelectedApplication(app)}
                   className="bg-cyan-500 hover:bg-cyan-600 text-white px-3 py-1 rounded"
                 >
                   View
