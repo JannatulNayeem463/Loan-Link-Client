@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "loan-link-18f52",
+    "prod": "loan-link-18f52"
+  },
+  "targets": {},
+  "etags": {}
+}
